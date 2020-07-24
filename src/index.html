@@ -1,14 +1,125 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="index.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>ValidCard</title>
+  <link rel="icon" href="./img/logo.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!--  SECCION BIENVENIDA -->
+
+  <div class="pantalla-wave" id="pantalla-wave">
+    <div class="header">
+      <div class="content">
+        <h1>Bienvenido, te presentamos a VALIDCARD, tu verificador de tarjetas de crédito personal.</h1>
+        <a class="theme-btn" id="boton">Empezar</a>
+      </div>
+      <img src="./img/logo.png">
+    </div>
+  </div>
+
+  <!--  SECCION TARJETA NUMERO -->
+  <div class="contenedor" id="contenedor">
+
+    <!--  Tarjeta -->
+    <section class="tarjeta" id="tarjeta">
+      <div class="delantera">
+        <div class="logo-marca" id="logo-marca">
+          <img src="./img/arriba.png" alt="">
+        </div>
+        <img src="img/Grupo 2.png" class="chip" alt="">
+        <div class="datos">
+          <div class="grupo" id="numero">
+            <p class="label">Número de Tarjeta</p>
+            <p class="numero">#### #### #### ####</p>
+          </div>
+          <div class="flexbox">
+            <div class="grupo" id="nombre">
+              <p class="label">Nombre de Tarjeta</p>
+              <p class="nombre">Jhon Doe</p>
+
+            </div>
+            <div class="grupo" id="expiracion">
+              <p class="label">Expiracion</p>
+              <p class="expiracion"><span class="mes">MM</span>/<span class="year">AA</span></p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trasera">
+        <div class="barra-magnetica"></div>
+        <div class="datos">
+          <div class="grupo" id="firma">
+            <p class="label"> Firma</p>
+            <div class="firma">
+              <p></p>
+              <!-- <p>Diana</p> -->
+            </div>
+          </div>
+          <div class="grupo" id="ccv">
+            <p class="label">CCV</p>
+            <p class="ccv"></p>
+          </div>
+        </div>
+        <p class="leyenda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur molestiae
+          inventore quo saepe totam illo!</p>
+        <a href="#" class="link-banco">www.validator.com</a>
+      </div>
+    </section>
+
+    <!-- Formulario -->
+    <form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+      <div class="grupo">
+        <label for="inputNumero">Número Tarjeta</label>
+        <input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+      </div>
+      <div class="grupo">
+        <label for="inputNombre">Nombre</label>
+        <input type="text" id="inputNombre" maxlength="19" autocomplete="off">
+      </div>
+      <div class="flexbox">
+        <div class="grupo expira">
+          <label for="selectMes">Expiración</label>
+          <div class="flexbox">
+            <div class="grupo-select">
+              <select name="mes" id="selectMes">
+                <option disabled selected>Mes</option>
+              </select>
+              <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="grupo-select">
+              <select name="year" id="selectYear">
+                <option disabled selected>Año</option>
+              </select>
+              <i class="fas fa-angle-down"></i>
+            </div>
+          </div>
+        </div>
+        <div class="grupo ccv">
+          <label for="inputCCV">CCV</label>
+          <input type="text" id="inputCCV" maxlength="3">
+        </div>
+      </div>
+      <button type="submit" class="btn-enviar" disabled>Enviar</button>
+    </form>
+  </div>
+
+  <footer></footer>
+  <script src="index.js" type="module"></script>
+  <script>
+
+  </script>
+</body>
+
 </html>
