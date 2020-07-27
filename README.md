@@ -13,18 +13,14 @@
 
 ## 1. Preámbulo
 
-El [algoritmo de Luhn](https://es.wikipedia.org/wiki/Algoritmo_de_Luhn),
-también llamado algoritmo de módulo 10, es un método de suma de verificación,
-se utiliza para validar números de identificación; tales como el IMEI de los
-celulares, tarjetas de crédito, etc.
+# ¡Bienvenidos a VALIDCARD!
+VALIDCARD es un producto digital, orientado a la verificación de la válidez de la tarjeta de crédito del usuario. 
+Para acceder a él es necesario clonar el presente proyecto, pero previamente debes contar instalado lo siguiente:
+* Git Bash
+* Node Js
+* Visual Studio Code 
 
-Este algoritmo es simple. Obtenemos la reversa del número a verificar (que
-solamente contiene dígitos [0-9]); a todos los números que ocupan una posición
-par se les debe multiplicar por dos, si este número es mayor o igual a 10,
-debemos sumar los dígitos del resultado; el número a verificar será válido si
-la suma de sus dígitos finales es un múltiplo de 10.
-
-![gráfica de algoritmo de Luhn](https://www.101computing.net/wp/wp-content/uploads/Luhn-Algorithm.png)
+![gráfica de algoritmo de Luhn](C:\DIANA\laboratoria\LIM013-card-validation\src\img\logo.png)
 
 ## 2. Resumen del proyecto
 

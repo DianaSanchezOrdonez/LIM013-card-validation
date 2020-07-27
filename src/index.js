@@ -13,12 +13,12 @@ const tarjeta = document.querySelector('#tarjeta'),
     boton = document.querySelector('#boton');
 
 
-/* seccion2.classList.add('hide')
+seccion2.classList.add('hide')
 //Enviar a la seccion2
 boton.addEventListener('click', () => {
     seccion1.classList.add('hide');
     seccion2.classList.add('show');
-}) */
+})
 
 //Campos disabled
 formulario.inputNombre.disabled = true;
@@ -92,7 +92,7 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
 });
 
 
-//console.log('metodo', validator.isValid('1234567890'))
+console.log('metodo', validator.isValid('1234567890'))
 //console.log('metodo', validator.isValid('3625102593804'))
 
 // Inhabilitar campos input

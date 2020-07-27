@@ -16,7 +16,7 @@ const validator = {
         num = parseInt(digito, 10);
 
       if (par) {
-        num *= 2
+        num = num * 2
       }
       if (num > 9) {
         num -= 9
@@ -25,10 +25,14 @@ const validator = {
       suma += num;
       par = !par;
     }
-    let result = (suma % 10) == 0;
-    return result;
-
-  }
+   
+    if(suma%10==0){
+      return true
+    }else{
+      return false
+    }
+  
+  },
 };
 
 
