@@ -12,18 +12,21 @@ const tarjeta = document.querySelector('#tarjeta'),
     seccion2 = document.querySelector('#contenedor'),
     boton = document.querySelector('#boton');
 
-seccion2.classList.add('hide')
+
+/* seccion2.classList.add('hide')
 //Enviar a la seccion2
 boton.addEventListener('click', () => {
     seccion1.classList.add('hide');
     seccion2.classList.add('show');
-})
+}) */
 
 //Campos disabled
 formulario.inputNombre.disabled = true;
 formulario.inputNombre.disabled = true;
 formulario.selectMes.disabled = true;
 formulario.selectYear.disabled = true;
+formulario.inputCCV.disabled = true;
+formulario.enviar.disabled = true;
 
 // Volteamos la tarjeta para mostrar el frente
 const mostrarFrente = () => {
@@ -55,7 +58,7 @@ for (let i = yearActual; i <= toYear; i++) {
     formulario.selectYear.appendChild(option)
 }
 
-/*--------------Input Numero de Tarjeta1 -------------------*/
+/*--------------Input Numero de Tarjeta -------------------*/
 formulario.inputNumero.addEventListener('keyup', (e) => {
     let valorInput = e.target.value;
 
@@ -85,24 +88,38 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
 
     mostrarFrente();
     disabledCampos(metodo);
+
 });
 
 
-//console.log('metodo', validator.isValid('4137894711755904'))
+//console.log('metodo', validator.isValid('1234567890'))
 //console.log('metodo', validator.isValid('3625102593804'))
 
 // Inhabilitar campos input
 const disabledCampos = (value) => {
-    if( value == false || value == '' || value == null){
+    if (value == false || value == '' || value == null) {
+
         formulario.inputNombre.disabled = true;
         formulario.inputNombre.disabled = true;
         formulario.selectMes.disabled = true;
-        formulario.selectYear.disabled = true
-    }else{
+        formulario.selectYear.disabled = true;
+        formulario.inputCCV.disabled = true;
+        formulario.enviar.disabled = true;
+        document.querySelector('.formulario_validacion-estado').classList.add('formulario_validacion-estado-activo');
+        document.querySelector('.grupo .formulario_input-error').classList.add('formulario_input-error-activo');
+        document.querySelector('.grupo .formulario_validacion-correcto').classList.remove('formulario_validacion-correcto-activo')
+      
+    } else {
+
         formulario.inputNombre.disabled = false;
         formulario.inputNombre.disabled = false;
         formulario.selectMes.disabled = false;
-        formulario.selectYear.disabled = false
+        formulario.selectYear.disabled = false;
+        formulario.inputCCV.disabled = false;
+        formulario.enviar.disabled = false;
+        document.querySelector('.formulario_validacion-estado').classList.remove('formulario_validacion-estado-activo');
+        document.querySelector('.grupo .formulario_input-error').classList.remove('formulario_input-error-activo');
+        document.querySelector('.grupo .formulario_validacion-correcto').classList.add('formulario_validacion-correcto-activo')
     }
 }
 

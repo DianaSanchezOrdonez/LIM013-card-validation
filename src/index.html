@@ -18,6 +18,7 @@
   <!--  SECCION BIENVENIDA -->
 
   <div class="pantalla-wave" id="pantalla-wave">
+    <img src="./img/wave2.png" alt="">
     <div class="header">
       <div class="content">
         <h1>Bienvenido, te presentamos a VALIDCARD, tu verificador de tarjetas de crédito personal.</h1>
@@ -80,27 +81,32 @@
 
     <!-- Formulario -->
     <form action="" id="formulario-tarjeta" class="formulario-tarjeta">
-      <div class="grupo">
+      <div class="grupo" id="grupo">
         <label for="inputNumero">Número Tarjeta</label>
-        <input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+        <div class="formulario_grupo-input">
+          <input type="text" id="inputNumero" class="inputNumero" maxlength="19" autocomplete="off" required>
+          <i class="formulario_validacion-estado fas fa-times-circle"></i>
+          <i class="formulario_validacion-correcto fas fa-check-circle"></i>
+        </div>
+        <p class="formulario_input-error">Número de Tarjeta inválido, porfavor intente nuevamente.</p>
       </div>
       <div class="grupo">
         <label for="inputNombre">Nombre</label>
-        <input type="text" id="inputNombre" maxlength="19" autocomplete="off">
+        <input type="text" id="inputNombre" maxlength="19" autocomplete="off" required>
       </div>
       <div class="flexbox">
         <div class="grupo expira">
           <label for="selectMes">Expiración</label>
           <div class="flexbox">
             <div class="grupo-select">
-              <select name="mes" id="selectMes">
-                <option disabled selected>Mes</option>
+              <select name="mes" id="selectMes" required>
+                <option disabled selected value="">Mes</option>
               </select>
               <i class="fas fa-angle-down"></i>
             </div>
             <div class="grupo-select">
-              <select name="year" id="selectYear">
-                <option disabled selected>Año</option>
+              <select name="year" id="selectYear" required>
+                <option disabled selected value="">Año</option>
               </select>
               <i class="fas fa-angle-down"></i>
             </div>
@@ -108,18 +114,16 @@
         </div>
         <div class="grupo ccv">
           <label for="inputCCV">CCV</label>
-          <input type="text" id="inputCCV" maxlength="3">
+          <input type="text" id="inputCCV" maxlength="3" required>
         </div>
       </div>
-      <button type="submit" class="btn-enviar" disabled>Enviar</button>
+      <button type="submit" class="btn-enviar" id="enviar">Enviar</button>
     </form>
   </div>
 
   <footer></footer>
+  <script src="https://kit.fontawesome.com/9654f30172.js" crossorigin="anonymous"></script>
   <script src="index.js" type="module"></script>
-  <script>
-
-  </script>
 </body>
 
 </html>

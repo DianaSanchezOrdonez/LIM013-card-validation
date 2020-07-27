@@ -2,7 +2,8 @@ const validator = {
 
   maskify: (creditCardNumber) => {
     let resultado = creditCardNumber.slice(0, -4).replace(/./g, '#') + creditCardNumber.slice(-4);
-    return resultado.replace(/([#]{4})/g, '$1 ');
+    return resultado
+    //return resultado.replace(/([#]{4})/g, '$1 ');
   },
 
   isValid(creditCardNumber) {
@@ -18,14 +19,15 @@ const validator = {
         num *= 2
       }
       if (num > 9) {
-        num = (num % 10) + 1
+        num -= 9
       }
 
       suma += num;
       par = !par;
     }
+    let result = (suma % 10) == 0;
+    return result;
 
-    return (suma % 10) == 0;
   }
 };
 
