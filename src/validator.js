@@ -1,9 +1,20 @@
 const validator = {
 
   maskify: (creditCardNumber) => {
-    let resultado = creditCardNumber.slice(0, -4).replace(/./g, '#') + creditCardNumber.slice(-4);
-    return resultado
-    //return resultado.replace(/([#]{4})/g, '$1 ');
+    /* let resultado = creditCardNumber.slice(0, -4).replace(/./g, '#') + creditCardNumber.slice(-4);
+    return resultado */
+    let salida = '',
+        ultimos = creditCardNumber.slice(-4, creditCardNumber.length);
+
+    if (creditCardNumber.length > 4) {
+      for (let i = 0; i < creditCardNumber.length - 4; i++) {
+        salida = salida + '#' ;
+      }
+      
+    } else {
+      return creditCardNumber;
+    }
+    return salida + ultimos;
   },
 
   isValid(creditCardNumber) {
@@ -12,27 +23,28 @@ const validator = {
       par = false;
 
     for (let i = len; i >= 0; i--) {
-      let digito = creditCardNumber.charAt(i),
-        num = parseInt(digito, 10);
+      let digito = parseInt(creditCardNumber[i]);
 
       if (par) {
-        num = num * 2
-      }
-      if (num > 9) {
-        num -= 9
+        digito = digito * 2;
+
+        if (digito > 9) {
+          digito = (digito % 10) + 1;
+        }
       }
 
-      suma += num;
+      suma = suma + digito;
       par = !par;
     }
-   
-    if(suma%10==0){
+
+    if (suma % 10 == 0) {
       return true
-    }else{
+    } else {
       return false
     }
-  
+
   },
+
 };
 
 

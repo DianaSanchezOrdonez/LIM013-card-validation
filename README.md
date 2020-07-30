@@ -20,7 +20,7 @@ Para acceder a él es necesario clonar el presente proyecto, pero previamente de
 * Node Js
 * Visual Studio Code 
 
-![gráfica de algoritmo de Luhn](C:\DIANA\laboratoria\LIM013-card-validation\src\img\logo.png)
+![gráfica de algoritmo de Luhn](https://raw.githubusercontent.com/DianaSanchezOrdonez/LIM013-card-validation/Diana/src/img/logo.png)
 
 ## 2. Resumen del proyecto
 

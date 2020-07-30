@@ -93,7 +93,8 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
 
 
 console.log('metodo', validator.isValid('1234567890'))
-//console.log('metodo', validator.isValid('3625102593804'))
+console.log('metodo', validator.isValid('79927398713'))
+console.log('metodo', validator.isValid('4137894711755904'))
 
 // Inhabilitar campos input
 const disabledCampos = (value) => {
