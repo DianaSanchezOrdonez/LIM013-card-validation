@@ -14,44 +14,37 @@
 ## 1. Preámbulo
 
 # ¡Bienvenidos a VALIDCARD!
+
+![logo](https://raw.githubusercontent.com/DianaSanchezOrdonez/LIM013-card-validation/Diana/src/img/logo.png)
+
 VALIDCARD es un producto digital, orientado a la verificación de la válidez de la tarjeta de crédito del usuario. 
 Para acceder a él es necesario clonar el presente proyecto, pero previamente debes contar instalado lo siguiente:
 * Git Bash
 * Node Js
 * Visual Studio Code 
 
-![gráfica de algoritmo de Luhn](https://raw.githubusercontent.com/DianaSanchezOrdonez/LIM013-card-validation/Diana/src/img/logo.png)
+
 
 ## 2. Resumen del proyecto
 
-En este proyecto tendrás que construir una aplicación web que le permita a un
-usuario validar el número de una tarjeta de crédito. Además, tendrás que
-implementar funcionalidad para ocultar todos los dígitos de una tarjeta menos
-los últimos cuatro.
+Este proyecto consiste en un validador de tarjetas de crédito por medio del algorimto de Luhn, dirigido a usuarios que tengan su pequeño negocio online (realizando ventas), ValidCard servirá de filtro para 
+completar la compra final.  
 
-La temática es libre. Tú debes pensar en qué situaciones de la vida real se
-necesitaría validar una tarjeta de crédito y pensar en cómo debe ser esa
-experiencia de uso (qué pantallas, explicaciones, mensajes, colores, ¿marca?)
-etc.
+## 3. Investigación
 
-## 3. Objetivos de aprendizaje
+## 4. Prototipo
 
 Aprenderás a construir una aplicación web que interactuará
 con lx usuarix final a través del navegador, utilizando HTML, CSS y JavaScript
 como tecnologías.
 
-### HTML y CSS
+### Prototipo V1
+![logo](https://raw.githubusercontent.com/DianaSanchezOrdonez/LIM013-card-validation/Diana/src/img/prototipoV1)
 
-* [ ] [Uso de HTML semántico.](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-* [ ] Uso de selectores de CSS.
-* [ ] Construir tu aplicación respetando el diseño realizado (maquetación).
 
-### DOM
+### Prototipo V2
 
-* [ ] Uso de selectores del DOM.
-* [ ] Manejo de eventos del DOM.
-* [ ] [Manipulación dinámica del DOM.](https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Introducci%C3%B3n)
-(appendChild |createElement | createTextNode| innerHTML | textContent | etc.)
+
 
 ### JavaScript
 
@@ -77,7 +70,7 @@ como tecnologías.
 * [ ] Manejo de repositorios de GitHub (clone | fork | gh-pages)
 
 ### UX
-
+r
 * [ ] Diseñar la aplicación pensando y entendiendo al usuario.
 * [ ] Crear prototipos para obtener feedback e iterar.
 * [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía)
