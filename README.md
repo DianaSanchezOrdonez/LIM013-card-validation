@@ -22,7 +22,6 @@ Para acceder a él es necesario clonar el presente proyecto, pero previamente de
 * Visual Studio Code 
 
 
-
 ## 2. Resumen del proyecto
 
 Este proyecto consiste en un validador de tarjetas de crédito por medio del algorimto de Luhn, dirigido a usuarios que tengan su pequeño negocio online (realizando ventas), ValidCard servirá de filtro para completar la compra final.  
