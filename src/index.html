@@ -29,7 +29,7 @@
   </div>
 
   <!--  SECCION TARJETA NUMERO -->
- 
+
   <div class="contenedor" id="contenedor">
     <h1>Método de Pago</h1>
     <!--  Tarjeta -->
@@ -118,8 +118,23 @@
           <input type="text" id="inputCCV" maxlength="3" required>
         </div>
       </div>
-      <button type="submit" class="btn-enviar" id="enviar">Enviar</button>
+      <button class="btn-enviar" id="pagar">Pagar Ahora</button>
     </form>
+  </div>
+  <!-- Pop Up -->
+  <div class="popup-overlay"></div>
+  <div class="popup">
+    <div class="popup-close" id="popup-close">
+      &times;
+    </div>
+    <div class="form">
+      <div class="avatar">
+        <img src="./img/Compra.png" alt="">
+      </div>
+      <div class="header">
+        Compra Exitosa
+      </div>
+    </div>
   </div>
 
   <footer></footer>

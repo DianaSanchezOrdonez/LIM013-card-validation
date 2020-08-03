@@ -10,7 +10,9 @@ const tarjeta = document.querySelector('#tarjeta'),
     ccv = document.querySelector('#tarjeta .ccv'),
     seccion1 = document.querySelector('#pantalla-wave'),
     seccion2 = document.querySelector('#contenedor'),
-    boton = document.querySelector('#boton');
+    boton = document.querySelector('#boton'),
+    botonPagar = document.querySelector('#pagar'),
+    botonCerrar = document.querySelector('#popup-close');
 
 
 seccion2.classList.add('hide')
@@ -26,7 +28,7 @@ formulario.inputNombre.disabled = true;
 formulario.selectMes.disabled = true;
 formulario.selectYear.disabled = true;
 formulario.inputCCV.disabled = true;
-formulario.enviar.disabled = true;
+formulario.pagar.disabled = true;
 
 // Volteamos la tarjeta para mostrar el frente
 const mostrarFrente = () => {
@@ -78,8 +80,9 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
     let valorJunto = valorInput.replace(/ /g, '')
     creditCardNumber.textContent = validator.maskify(valorJunto);
 
-    if (valorInput == '') {
-        creditCardNumber.textContent = '#### #### #### ####'
+    if (valorInput == '' && formulario.inputNumero.value == '') {
+
+        creditCardNumber.textContent = '#### #### #### ####';
     }
 
     let metodo = validator.isValid(valorJunto)
@@ -92,9 +95,9 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
 });
 
 
-console.log('metodo', validator.isValid('1234567890'))
-console.log('metodo', validator.isValid('79927398713'))
-console.log('metodo', validator.isValid('4137894711755904'))
+//console.log('metodo', validator.isValid('1234567890'))
+// console.log('metodo', validator.isValid('79927398713'))
+// console.log('metodo', validator.isValid('4137894711755904'))
 
 // Inhabilitar campos input
 const disabledCampos = (value) => {
@@ -105,11 +108,11 @@ const disabledCampos = (value) => {
         formulario.selectMes.disabled = true;
         formulario.selectYear.disabled = true;
         formulario.inputCCV.disabled = true;
-        formulario.enviar.disabled = true;
+        formulario.pagar.disabled = true;
         document.querySelector('.formulario_validacion-estado').classList.add('formulario_validacion-estado-activo');
         document.querySelector('.grupo .formulario_input-error').classList.add('formulario_input-error-activo');
         document.querySelector('.grupo .formulario_validacion-correcto').classList.remove('formulario_validacion-correcto-activo')
-      
+
     } else {
 
         formulario.inputNombre.disabled = false;
@@ -117,7 +120,7 @@ const disabledCampos = (value) => {
         formulario.selectMes.disabled = false;
         formulario.selectYear.disabled = false;
         formulario.inputCCV.disabled = false;
-        formulario.enviar.disabled = false;
+        formulario.pagar.disabled = false;
         document.querySelector('.formulario_validacion-estado').classList.remove('formulario_validacion-estado-activo');
         document.querySelector('.grupo .formulario_input-error').classList.remove('formulario_input-error-activo');
         document.querySelector('.grupo .formulario_validacion-correcto').classList.add('formulario_validacion-correcto-activo')
@@ -166,4 +169,13 @@ formulario.inputCCV.addEventListener('keyup', () => {
 
     ccv.textContent = formulario.inputCCV.value
 
+});
+
+/*--------------PopUp --------------------*/
+botonPagar.addEventListener('click', () => {
+    document.body.classList.add('showLoginForm');
+});
+
+botonCerrar.addEventListener('click', () => {
+    document.body.classList.remove('showLoginForm');
 });

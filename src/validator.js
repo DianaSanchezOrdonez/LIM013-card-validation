@@ -37,7 +37,7 @@ const validator = {
       par = !par;
     }
 
-    if (suma % 10 == 0) {
+    if (suma !==0 && suma % 10 == 0) {
       return true
     } else {
       return false
